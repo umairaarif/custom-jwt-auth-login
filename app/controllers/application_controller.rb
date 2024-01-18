@@ -10,4 +10,8 @@ class ApplicationController < ActionController::API
         decode = jwt_decode(header)
         @current_user = User.find(decode[:user_id])
     end
+
+    def current_user
+        @current_user
+    end
 end
